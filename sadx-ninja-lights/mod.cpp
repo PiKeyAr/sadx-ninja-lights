@@ -33,7 +33,6 @@ bool hide_text = false;
 int PrevX = 0;
 int PrevY = 0;
 
-
 void UpdateLighting()
 {
     return;
@@ -237,12 +236,9 @@ extern "C"
                     DisplayDebugStringFormatted(NJM_LOCATION(1, 7), "X  : %f", simple_x);
                     DisplayDebugStringFormatted(NJM_LOCATION(1, 8), "Y  : %f", simple_y);
                     DisplayDebugStringFormatted(NJM_LOCATION(1, 9), "Z  : %f", simple_z);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 11), "R  : %f", simple_r);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 12), "G  : %f", simple_g);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 13), "B  : %f", simple_b);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 15), "AMB: %f", simple_a);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 16), "DIF: %f", simple_d);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 17), "SPC: %f", simple_s);
+                    DisplayDebugStringFormatted(NJM_LOCATION(1, 11), "AMB: %f", simple_a);
+                    DisplayDebugStringFormatted(NJM_LOCATION(1, 12), "DIF: %f", simple_d);
+                    DisplayDebugStringFormatted(NJM_LOCATION(1, 13), "SPC: %f", simple_s);
                 }
                 else
                 {
@@ -250,12 +246,9 @@ extern "C"
                     DisplayDebugStringFormatted(NJM_LOCATION(1, 7), "X  : %f", simple.vctr.x);
                     DisplayDebugStringFormatted(NJM_LOCATION(1, 8), "Y  : %f", simple.vctr.y);
                     DisplayDebugStringFormatted(NJM_LOCATION(1, 9), "Z  : %f", simple.vctr.z);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 11), "R  : %f", simple.attr.argb.r);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 12), "G  : %f", simple.attr.argb.g);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 13), "B  : %f", simple.attr.argb.b);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 15), "AMB: %f", simple.attr.iamb);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 16), "DIF: %f", simple.attr.idif);
-                    DisplayDebugStringFormatted(NJM_LOCATION(1, 17), "SPC: %f", simple.attr.ispc);
+                    DisplayDebugStringFormatted(NJM_LOCATION(1, 11), "AMB: %f", simple.attr.iamb);
+                    DisplayDebugStringFormatted(NJM_LOCATION(1, 12), "DIF: %f", simple.attr.idif);
+                    DisplayDebugStringFormatted(NJM_LOCATION(1, 13), "SPC: %f", simple.attr.ispc);
                 }
             }
             //Easy mode
@@ -325,8 +318,8 @@ extern "C"
         }
         else if (mode == 1)
         {
-            if (selection < 0) selection = 8;
-            if (selection > 8) selection = 0;
+            if (selection < 0) selection = 5;
+            if (selection > 5) selection = 0;
         }
         else if (mode == 2)
         {
@@ -378,15 +371,9 @@ extern "C"
                 if (selection == 0)  simple_x += valueadd;
                 else if (selection == 1)  simple_y += valueadd;
                 else if (selection == 2)  simple_z += valueadd;
-                else if (selection == 3)  simple_r += valueadd;
-                else if (selection == 4)  simple_g += valueadd;
-                else if (selection == 5)  simple_b += valueadd;
-                else if (selection == 6)  simple_a += valueadd;
-                else if (selection == 7)  simple_d += valueadd;
-                else if (selection == 8)  simple_s += valueadd;
-                if (simple_r < 0) simple_r = 1;
-                if (simple_g < 0) simple_g = 1;
-                if (simple_b < 0) simple_b = 1;
+                else if (selection == 3)  simple_a += valueadd;
+                else if (selection == 4)  simple_d += valueadd;
+                else if (selection == 5)  simple_s += valueadd;
                 if (simple_a < 0) simple_a = 1;
                 if (simple_d < 0) simple_d = 1;
                 if (simple_s < 0) simple_s = 1;
